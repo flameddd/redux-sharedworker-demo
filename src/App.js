@@ -20,7 +20,7 @@ function App() {
           fontWeight: "bold",
           }}>redux-sharedworker-demo</div>
         <p>
-          <a target="_blank" rel="noopener noreferrer" href="/" style={{ color: 'blue' }}>
+          <a target="_blank" rel="noopener noreferrer" href={window.location.href} style={{ color: 'blue' }}>
             Open new tabs to test <b>redux-sharedworker</b>
           </a>
         </p>
