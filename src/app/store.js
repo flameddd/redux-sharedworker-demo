@@ -1,8 +1,18 @@
-import { configureStore } from '@reduxjs/toolkit';
+import { configureStore, getDefaultMiddleware } from '@reduxjs/toolkit';
+import createSharedWorkerMiddleware from '@flameddd/redux-sharedworker/src';
 import counterReducer from '../features/counter/counterSlice';
 
-export default configureStore({
-  reducer: {
-    counter: counterReducer,
+const shareWorkerMiddleware = createSharedWorkerMiddleware({
+  targetActions: ['counter/increment']
+})
+
+// "configureStore" is @reduxjs/toolkit API
+// ref: https://redux-toolkit.js.org/usage/usage-with-typescript#using-configurestore-with-typescript
+export default configureStore(
+  {
+    reducer: {
+     counter: counterReducer,
+    },
+    middleware: getDefaultMiddleware().concat(shareWorkerMiddleware)
   },
-});
+);

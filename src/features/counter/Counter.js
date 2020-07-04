@@ -42,9 +42,11 @@ export function Counter() {
         />
         <button
           className={styles.button}
-          onClick={() =>
-            dispatch(incrementByAmount(Number(incrementAmount) || 0))
-          }
+          onClick={() => dispatch({
+            type: 'counter/incrementByAmount',
+            payload: Number(incrementAmount) || 0,
+            SHARED_WORDER_ACTION: true,
+          })}
         >
           Add Amount
         </button>
