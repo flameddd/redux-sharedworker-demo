@@ -2,6 +2,7 @@
   "name": "redux-sharedworker-demo",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://flameddd.github.io/redux-sharedworker-demo",
   "dependencies": {
     "@flameddd/redux-sharedworker": "^2.0.0",
     "@reduxjs/toolkit": "^1.4.0",
