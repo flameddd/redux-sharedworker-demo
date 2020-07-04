@@ -1,5 +1,5 @@
 import { configureStore, getDefaultMiddleware } from '@reduxjs/toolkit';
-import createSharedWorkerMiddleware from '@flameddd/redux-sharedworker/src';
+import createSharedWorkerMiddleware from '@flameddd/redux-sharedworker';
 import counterReducer from '../features/counter/counterSlice';
 
 const shareWorkerMiddleware = createSharedWorkerMiddleware({
